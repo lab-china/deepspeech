@@ -165,7 +165,7 @@ def download_and_process_datasets(directory, datasets):
   for dataset in datasets:
     tf.logging.info("Preparing dataset %s", dataset)
     dataset_dir = os.path.join(directory, dataset)
-    # download_and_extract(dataset_dir, LIBRI_SPEECH_URLS[dataset])
+    download_and_extract(dataset_dir, LIBRI_SPEECH_URLS[dataset])
     convert_audio_and_split_transcript(
         dataset_dir + "/LibriSpeech", dataset, dataset + "-wav",
         dataset_dir + "/LibriSpeech", dataset + ".csv")
