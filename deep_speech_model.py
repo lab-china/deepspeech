@@ -18,13 +18,13 @@ from __future__ import division
 from __future__ import print_function
 
 from six.moves import xrange  # pylint: disable=redefined-builtin
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
 
 # Supported rnn cells.
 SUPPORTED_RNNS = {
-    "lstm": tf.nn.rnn_cell.BasicLSTMCell,
-    "rnn": tf.nn.rnn_cell.RNNCell,
-    "gru": tf.nn.rnn_cell.GRUCell,
+    "lstm": tf.compat.v1.nn.rnn_cell.BasicLSTMCell,
+    "rnn": tf.compat.v1.nn.rnn_cell.RNNCell,
+    "gru": tf.compat.v1.nn.rnn_cell.GRUCell,
 }
 
 # Parameters for batch normalization.
